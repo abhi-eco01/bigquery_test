@@ -1,0 +1,7 @@
+SELECT
+aa.agency_name
+,aa.total_episodes_non_lupa as Non_LUPA_2013
+,bb.total_episodes_non_lupa as Non_LUPA_2014
+FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013` aa
+left join `bigquery-public-data.cms_medicare.home_health_agencies_2014` bb
+on aa.agency_name = bb.agency_name
